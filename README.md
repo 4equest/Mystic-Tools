@@ -5,9 +5,9 @@ WIP
   
 # Cautions
 I am not responsible if your keyboard stops working with this program! **At your own risk!!**
-* If msi center is installed, it may not work properly. Please remove the dll after obtaining it.
+* If msi center is installed, it may not work properly. Please remove after obtaining dll.
 * Playing videos may load the keyboard and cause it to freeze. If this happens, please unplug the USB.
-
+* Chattering may occur during video playback.
   
 # Requirements
 * MsiHid_x64.dll : You can find it somewhere in the directory where the msi center executable binary resides. Or you may be able to find it on the net...
