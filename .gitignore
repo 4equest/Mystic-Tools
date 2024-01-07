@@ -1,0 +1,9 @@
+﻿################################################################################
+# この .gitignore ファイルは Microsoft(R) Visual Studio によって自動的に作成されました。
+################################################################################
+
+/.vs/Mystic_Tools/FileContentIndex
+/.vs
+/Mystic_Tools/.vs
+/Mystic_Tools/obj
+/Mystic_Tools/bin
