@@ -5,6 +5,10 @@ VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mystic_Tools", "Mystic_Tools\Mystic_Tools.csproj", "{894D889A-C17B-4E40-9934-DDFCDA496593}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI_Editor", "GUI_Editor\GUI_Editor.csproj", "{E87B1D49-7C37-4CB6-8D3B-03DC3699EB66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenMSIHID", "OpenMSIHID\OpenMSIHID.csproj", "{3A7E7EFE-8B0F-4E1C-A433-C140B1A38814}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{894D889A-C17B-4E40-9934-DDFCDA496593}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{894D889A-C17B-4E40-9934-DDFCDA496593}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{894D889A-C17B-4E40-9934-DDFCDA496593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E87B1D49-7C37-4CB6-8D3B-03DC3699EB66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E87B1D49-7C37-4CB6-8D3B-03DC3699EB66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E87B1D49-7C37-4CB6-8D3B-03DC3699EB66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E87B1D49-7C37-4CB6-8D3B-03DC3699EB66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A7E7EFE-8B0F-4E1C-A433-C140B1A38814}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A7E7EFE-8B0F-4E1C-A433-C140B1A38814}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A7E7EFE-8B0F-4E1C-A433-C140B1A38814}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A7E7EFE-8B0F-4E1C-A433-C140B1A38814}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
