@@ -99,14 +99,20 @@ namespace Mystic_Tools
 
             CoordinateConverter coordinateConverter = new CoordinateConverter(frameBitmap.Width, frameBitmap.Height);
             Process.Start("C:\\Program Files\\VideoLAN\\VLC\\vlc.exe", video_path);
+            Thread.Sleep(500);
             //player.Play();
             stopwatch.Start();
             while (true)
             {
                 long elapsedMilliseconds = stopwatch.ElapsedMilliseconds;
                 currentFrame = (int)(elapsedMilliseconds / 1000.0 * videoFrameAnalyzer.FrameRate);
-                frameBitmap = videoFrameAnalyzer.GetFrameColorAtFrame(currentFrame);
 
+                if (currentFrame >= videoFrameAnalyzer.FrameCount)
+                {
+                    break;
+                }
+                
+                frameBitmap = videoFrameAnalyzer.GetFrameColorAtFrame(currentFrame);
 
                 for (int i = 0; i < 92; i ++)
                 {
