@@ -15,3 +15,6 @@ I am not responsible if your keyboard stops working with this program! **At your
 * VLC : It is only called in `Process.Start`. If you just want audio, comment it and out `player.Play();`. (KeyboardManager.cs)
 * Libraries available at Nuget (check csproj)
 
+# FAQ
+* Q. Why is only Japanese supported? Why don't you support other keyboards?
+* A. Because this is the only keyboard I have. If you want it to be supported, please buy me a keyboard :)
