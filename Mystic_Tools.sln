@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mystic_Tools", "Mystic_Tools.csproj", "{894D889A-C17B-4E40-9934-DDFCDA496593}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{894D889A-C17B-4E40-9934-DDFCDA496593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{894D889A-C17B-4E40-9934-DDFCDA496593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{894D889A-C17B-4E40-9934-DDFCDA496593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{894D889A-C17B-4E40-9934-DDFCDA496593}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4CFF56B-D71E-47F1-A364-5C46D423243B}
+	EndGlobalSection
+EndGlobal
