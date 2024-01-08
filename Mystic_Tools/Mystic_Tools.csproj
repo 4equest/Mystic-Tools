@@ -23,7 +23,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>portable</DebugType>
-    <NoWarn>NU1701</NoWarn>
+    <NoWarn>NU1701;CA1416</NoWarn>
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
     <Deterministic>True</Deterministic>
     <Optimize>False</Optimize>
@@ -31,7 +31,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DebugType>portable</DebugType>
-    <NoWarn>NU1701</NoWarn>
+    <NoWarn>NU1701;CA1416</NoWarn>
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
     <Deterministic>True</Deterministic>
   </PropertyGroup>

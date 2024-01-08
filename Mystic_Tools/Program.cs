@@ -8,10 +8,10 @@ namespace Mystic_Tools
         {
             KeyboardManager keyboardManager = new();
 
-            keyboardManager.StartWindowWatcher();
+            //keyboardManager.StartWindowWatcher();
 
             // if you do not want to play video, comment out the following line
-            //keyboardManager.VideoPlay("badapple.mp4");
+            keyboardManager.VideoPlay("badapple.mp4");
             while (true)
             {
                 Thread.Sleep(1000);
