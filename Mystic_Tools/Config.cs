@@ -1,7 +1,6 @@
 ﻿using IniParser;
 using IniParser.Model;
 
-
 namespace Mystic_Tools
 {
     /// <summary>

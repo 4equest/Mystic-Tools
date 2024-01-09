@@ -1,4 +1,3 @@
-
 namespace Mystic_Tools
 {
     internal static class Program
