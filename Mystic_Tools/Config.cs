@@ -49,6 +49,6 @@ namespace Mystic_Tools
         public string ExecutablePath { get; }
         public byte Brightness { get; }
         public Dictionary<string, byte[]> color { get; } = new();
-        private static readonly char[] separator = { ';' };
+        private static readonly char[] separator = { ',' };
     }
 }
