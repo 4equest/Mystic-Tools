@@ -14,6 +14,7 @@
         /// <param name="height">高さ</param>
         public KeyMapConverter()
         {
+
         }
 
         /// <summary>
@@ -38,7 +39,7 @@
         /// <returns>座標</returns>
         public int[] KeyIndexToCoordinate(int keyIndex, int width, int height)
         {
-            ratio = Math.Min(width / mapWidth, height / mapHeight);
+            ratio = Math.Min((float)width / mapWidth, (float)height / mapHeight);
 
             if (keyIndex < 0 || keyIndex >= keyMap.Count)
             {
@@ -48,13 +49,11 @@
             return KeyToCoordinate(keyMap.ElementAt(keyIndex).Key);
         }
 
-        private readonly int Width, Height;
+        //private readonly int Width, Height;
 
         private float ratio;
 
-        public const float mapWidth = 3767;
-
-        public const float mapHeight = 1227;
+        public int mapWidth, mapHeight;
 
         private readonly Dictionary<string, int[]> keyMap = new()
         {

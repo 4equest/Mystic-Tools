@@ -7,7 +7,7 @@ namespace Mystic_Tools
     /// <summary>
     /// キーボードの設定を行うクラスです。
     /// </summary>
-    public class GK50LP_TKL : KeyMapConverter, Keyboard
+    public class GK50LP_TKL : Keyboard
     {
 
         public GK50LP_TKL()
@@ -16,6 +16,9 @@ namespace Mystic_Tools
             {
                 Pages[i] = new byte[65];
             }
+
+            mapWidth = 3767;
+            mapHeight = 1227;
         }
 
         /// <summary>
@@ -511,7 +514,7 @@ namespace Mystic_Tools
         }
 
         
-        public void SetCustomizeRGBColor(int keyCode, byte R, byte G, byte B, byte Brightness = 255)
+        public override void SetCustomizeRGBColor(int keyCode, byte R, byte G, byte B, byte Brightness = 255)
         {
             //num5, 1 == keyCode となるばしょのRGBを変更するようにすればうまく動くはず　というかBrightnessいらなくね？ 255固定で
             GK50LP_TKL_JP[keyCode, 1] = R;
@@ -519,7 +522,7 @@ namespace Mystic_Tools
             GK50LP_TKL_JP[keyCode, 3] = B;
         }
 
-        public void SetCustomizeRGBColor(int keyCode, Color color, byte Brightness = 255)
+        public override void SetCustomizeRGBColor(int keyCode, Color color, byte Brightness = 255)
         {
             //num5, 1 == keyCode となるばしょのRGBを変更するようにすればうまく動くはず　というかBrightnessいらなくね？ 255固定で
             GK50LP_TKL_JP[keyCode, 1] = color.R;
@@ -610,7 +613,7 @@ namespace Mystic_Tools
         /// カスタマイズ設定を設定します。
         /// </summary>
         /// <param name="brightness">明るさ</param>
-        public void SetCustomize(byte brightness)
+        public override void SetCustomize(byte brightness)
         {
             Pages[5][2] = 33;
             Pages[5][60] = brightness;

@@ -6,7 +6,7 @@ namespace Mystic_Tools.ActiveWindow
     /// <summary>
     /// アクティブなウィンドウの変更を監視するクラスです。
     /// </summary>
-    public class Watcher
+    public class WindowWatcher
     {
         [DllImport("user32.dll")]
         private static extern IntPtr GetForegroundWindow();
@@ -23,7 +23,7 @@ namespace Mystic_Tools.ActiveWindow
         /// Watcherクラスの新しいインスタンスを初期化します。
         /// </summary>
         /// <param name="interval">監視の間隔（ミリ秒）</param>
-        public Watcher(int interval = 200)
+        public WindowWatcher(int interval = 200)
         {
             timer = new Timer { Interval = interval };
             timer.Elapsed += Timer_Tick;

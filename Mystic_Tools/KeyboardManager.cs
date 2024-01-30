@@ -17,7 +17,7 @@ namespace Mystic_Tools
         public KeyboardManager()
         {
             AppDomain.CurrentDomain.ProcessExit += new EventHandler(ProcessExit);
-            watcher = new Watcher();
+            watcher = new WindowWatcher();
             watcher.WindowChanged += (sender, e) =>
             {
                 WhenActiveWindowChanged();
@@ -77,6 +77,25 @@ namespace Mystic_Tools
             Console.WriteLine(keyboard.CloseDevice());
 
             oldActiveWindowPath = ActiveWindowPath.GetPath();
+        }
+
+        public void StartAnimation()
+        {
+
+            GK50LP_TKL keyboard = new();
+            Console.WriteLine(keyboard.Init());
+            IAnimation animation = new AnoGakki(keyboard);
+
+            // Startメソッドを非同期で実行
+            Task startTask = Task.Run(() => animation.Start());
+
+            Thread.Sleep(5000);
+            // 必要に応じて、Stopメソッドを非同期で実行
+            Task stopTask = Task.Run(() => animation.Stop());
+
+            // Stopタスクの完了を待つ
+            stopTask.Wait();
+
         }
 
         public void VideoPlay(string video_path)
@@ -142,7 +161,7 @@ namespace Mystic_Tools
 
         public List<Config> configs = [];
 
-        private readonly Watcher watcher;
+        private readonly WindowWatcher watcher;
 
         private string oldActiveWindowPath = string.Empty;
 
