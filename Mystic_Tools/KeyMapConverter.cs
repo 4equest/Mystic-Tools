@@ -1,21 +1,19 @@
-﻿namespace Mystic_Tools.Utils
+﻿namespace Mystic_Tools
 {
     /// <summary>
     /// 座標を変換するクラスです。
     /// </summary>
-    internal class CoordinateConverter
+    public class KeyMapConverter
     {
+
 
         /// <summary>
         /// CoordinateConverterクラスの新しいインスタンスを初期化します。
         /// </summary>
         /// <param name="width">幅</param>
         /// <param name="height">高さ</param>
-        public CoordinateConverter(int width, int height)
+        public KeyMapConverter()
         {
-            this.Width = width;
-            this.Height = height;
-            this.ratio = Math.Min(Width / mapWidth, Height / mapHeight);
         }
 
         /// <summary>
@@ -38,8 +36,10 @@
         /// </summary>
         /// <param name="keyIndex">キーのインデックス</param>
         /// <returns>座標</returns>
-        public int[] KeyIndexToCoordinate(int keyIndex)
+        public int[] KeyIndexToCoordinate(int keyIndex, int width, int height)
         {
+            ratio = Math.Min(width / mapWidth, height / mapHeight);
+
             if (keyIndex < 0 || keyIndex >= keyMap.Count)
             {
                 return new[] { -1, -1 };
@@ -52,9 +52,9 @@
 
         private float ratio;
 
-        private const float mapWidth = 3767;
+        public const float mapWidth = 3767;
 
-        private const float mapHeight = 1227;
+        public const float mapHeight = 1227;
 
         private readonly Dictionary<string, int[]> keyMap = new()
         {

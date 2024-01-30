@@ -1,6 +1,5 @@
 ﻿using MsiHid;
 using Mystic_Tools.ActiveWindow;
-using Mystic_Tools.Utils;
 using System.Diagnostics;
 using System.Drawing;
 using NAudio.Wave;
@@ -97,7 +96,6 @@ namespace Mystic_Tools
             int currentFrame = 0;
             Bitmap frameBitmap = videoFrameAnalyzer.GetFrameColorAtFrame(currentFrame);
 
-            CoordinateConverter coordinateConverter = new CoordinateConverter(frameBitmap.Width, frameBitmap.Height);
             Process.Start("C:\\Program Files\\VideoLAN\\VLC\\vlc.exe", video_path);
             Thread.Sleep(500);
             //player.Play();
@@ -116,7 +114,7 @@ namespace Mystic_Tools
 
                 for (int i = 0; i < 92; i ++)
                 {
-                    int[] keyCoordinate = coordinateConverter.KeyIndexToCoordinate(i);
+                    int[] keyCoordinate = keyboard.KeyIndexToCoordinate(i, frameBitmap.Width, frameBitmap.Height);
                     keyboard.SetCustomizeRGBColor(i, frameBitmap.GetPixel(keyCoordinate[0] + offsetX, keyCoordinate[1] + offsetY));
                 }
 

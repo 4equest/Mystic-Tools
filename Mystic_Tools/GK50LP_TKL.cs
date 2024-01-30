@@ -7,7 +7,7 @@ namespace Mystic_Tools
     /// <summary>
     /// キーボードの設定を行うクラスです。
     /// </summary>
-    public class GK50LP_TKL
+    public class GK50LP_TKL : KeyMapConverter, Keyboard
     {
 
         public GK50LP_TKL()
