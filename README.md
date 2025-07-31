@@ -1,6 +1,3 @@
-# Demo
-https://www.youtube.com/watch?v=HYBveMuHh5I
-
 # Mystic-Tools
 WIP
 * Program to control RGB LEDs on msi vigor gk50 low profile tkl jp keyboard.
